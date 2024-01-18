@@ -1,3 +1,6 @@
+# Behavioral Analysis of Megaline Clients: Surf Plan vs. Ultimate Plan
+
+###### Project Objective: 
 The project involves conducting a preliminary analysis for Megaline, a telecom operator offering two prepaid plans: Surf and Ultimate. 
 The objective is to determine which plan generates more revenue to assist in adjusting the advertising budget. 
 The dataset includes information on 500 Megaline clients, covering details such as client demographics, plan usage, and the number of calls and text messages in 2018.
