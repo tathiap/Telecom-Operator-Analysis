@@ -1,65 +1,67 @@
-# Megaline Plan Revenue Analysis: EDA, Forecasting & A/B Testing
+# Predicting Ultra Plan Subscription & Megaline Plan Revenue Analysis
 
-This project analyzes customer behavior and revenue performance for a telecom provider, **Megaline**, to determine which of its two prepaid mobile plans — **Surf** and **Ultimate** — is more profitable. Using user activity data from 500 clients across calls, messages, and internet usage, we perform a complete data workflow including cleaning, analysis, forecasting, and hypothesis testing.
+Welcome to a dual-project repository focused on customer behavior analytics in the telecom sector. This repository contains:
+
+  1. Predicting Ultra Plan Subscription Behavior — a classification-based machine learning project.
+
+  2. Megaline Plan Revenue Analysis — a forecasting and statistical analysis project.
+
+
+---
+## Project 1: Predicting Ultra Plan Subscription
+
+### Objective:
+To predict whether a user is subscribed to the 'Ultra' mobile plan using historical usage data including calls, texts, and mobile data.
+
+### Methods & Tools
+* Libraries: pandas, scikit-learn, matplotlib, seaborn
+
+* Models:
+  * Decision Tree
+  * Random Forest
+  * Logistic Regression
+  * Gradient Boosting
+  * Support Vector Machine (SVM)
+
+* Evaluation Metrics:
+  * Accuracy
+  * Precision, Recall, F1-score (specifically for the Ultra class)
+  * Confusion Matrices
+  * Feature Importance Analysis
+
+* Preprocessing:
+  * Train/Validation/Test split
+  * Standardization using StandardScaler
+  * Hyperparameter tuning using GridSearchCV
+
+### Outcome
+Random Forest and Gradient Boosting yielded the best performance. Feature importance analysis highlighted key usage variables influencing subscription behavior. Despite the class imbalance, fine-tuned models achieved over 80% accuracy on validation and test sets.
 
 ---
 
-## Project Objectives
+## Project 2: Megaline Plan Revenue Analysis
 
-* Identify which plan (Surf or Ultimate) generates more **average** and **total revenue**
-* Understand usage patterns in **calls, messages, and data**
-* Detect **statistically significant differences** in revenue across plans and regions
-* Explore **monthly trends** to support future **forecasting and strategic planning**
-* Deliver **actionable recommendations** for business and marketing decisions
+### Objective
+To understand and forecast revenue performance of the Megaline telecom plans using historical usage patterns and plan preferences.
 
----
+### Methods & Tools
+Libraries: pandas, matplotlib, seaborn, scipy.stats, statsmodels
 
-##  Tools & Technologies
+* EDA & Statistical Analysis:
+  * Monthly usage patterns by plan
+  * Revenue distribution analysis
 
-- **Python (Pandas, NumPy)** – Data manipulation and aggregation  
-- **Matplotlib / Seaborn** – Data visualization  
-- **SciPy** – Statistical hypothesis testing (Welch’s t-test)  
-- **Jupyter Notebook** – Interactive analysis and documentation  
+* Independent t-tests on:
+  * Revenue by plan
+  * Revenue by region (e.g., NY-NJ vs others)
 
----
+* Forecasting:
+  * Simulated revenue trend lines
+  * Linear regression fits by plan
 
-##  Key Findings
+### Outcome
+* Clear revenue advantage for the Ultimate plan over the Surf plan.
+* Statistically significant revenue differences were observed between regions and plans.
+* Forecasting models suggest a stable upward trend in revenue for both plans, particularly Ultimate.
 
-- **Ultimate plan users** have higher average monthly revenue (~$72) than Surf users (~$58), but the **Surf plan generated more total revenue** due to a larger user base.
-- **Ultimate users consistently consume more data and call minutes**, indicating high engagement and stability.
-- **Surf users exhibit more variable usage**, often exceeding included limits driving overage fees and revenue spikes.
-- A **t-test confirmed a statistically significant difference** in average revenue between plans (p < 0.0001).
-- Users from the **NY-NJ region also showed significantly different revenue behavior** compared to users in other regions.
-- Trend analysis suggested **Ultimate plan revenue is stable or increasing**, while Surf shows flatter or declining patterns.
 
----
-
-## Visual Insights
-
-The project includes:
-- Line plots of **monthly internet, call, and message usage** by plan
-- Revenue distribution histograms by plan
-- Linear regression trendlines for **forecasting revenue over time**
-- Boxplots and summary tables for visualizing variability
-- T-test results for **A/B testing-style comparisons**
-
----
-
-## Dataset Overview
-
-- `megaline_users.csv` – User demographics and assigned plan  
-- `megaline_calls.csv` – Call logs with duration and timestamps  
-- `megaline_messages.csv` – SMS usage  
-- `megaline_internet.csv` – Internet traffic data per session  
-- `megaline_plans.csv` – Plan pricing and allowances  
-
----
-
-## Business Recommendations
-
-- Promote the **Ultimate plan to high-usage customers** for better revenue stability
-- Monitor and optimize **Surf overage pricing**, as it contributes significantly to total revenue
-- Explore **region-specific marketing** strategies based on geographic revenue patterns
-- Consider adding predictive models for **usage-based churn or plan upgrade targeting**
-
----
